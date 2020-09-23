@@ -1,1 +1,1 @@
-web: setip.sh && streamlit run 
+web: setip.sh && streamlit run app.py
