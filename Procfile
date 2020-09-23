@@ -1,0 +1,1 @@
+web: setip.sh && streamlit run 
