@@ -5,10 +5,8 @@ st.title('Utility Split Calculator')
 bill_total = (st.number_input('Enter the total bill', min_value = 1, value = 100))
 st.write("")
 
-
 st.write('Select the number of groups for this bill')
 groups = st.slider('Groups', 1, 5)
-
 
 total_units = 0
 group_dict = {}
@@ -25,13 +23,7 @@ for key, value in group_dict.items():
 	amount = int((bill_total * group_dict[key][2] / total_units) / group_dict[key][0])
 	group_total = group_dict[key][0] * amount
 	total_collected += group_total
-
 	st.write(f'The {group_dict[key][0]} person(s) in Group {i} owe(s) ${amount}.')
 	i +=1
 
 st.write(f'Total collected will be ${total_collected}, which is ${bill_total - total_collected} less than the bill total (${bill_total}).')
-
-
-
-
-
